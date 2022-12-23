@@ -1,0 +1,11 @@
+import:
+  - ~/.config/alacritty/colorschemes/gruvbox-material.yml
+window:
+  padding:
+    x: 8
+    y: 8
+  #opacity: 95
+font:
+  normal:
+    family: "MesloLGS NF"
+  size: 12.0

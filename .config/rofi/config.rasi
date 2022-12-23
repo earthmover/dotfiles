@@ -1,0 +1,7 @@
+@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
+
+* {
+   font: "MesloLGS NF 14";
+   show-icons: true;
+   lines: 20;
+}
