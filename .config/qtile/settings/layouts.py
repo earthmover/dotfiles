@@ -5,17 +5,26 @@ from .theme import colors
 # Layouts and layout rules
 
 
-layout_conf = {
+bsp_conf = {
     'border_focus': colors['focus'][0],
     'border_normal': colors['grey'][0],
     'border_width': 4,
-    'margin': 10
+    'border_on_single': True,
+    'margin': 10,
+    'grow_amount': 5,
+    'lower_right': True,
+    'ratio': 1.6,
+
+}
+
+zoomy_conf = {
+    "margin": 10,
+    "column_width": 250,
 }
 
 layouts = [
-    layout.Bsp(**layout_conf),
-    layout.Max(),
-    layout.Zoomy(),
+    layout.Bsp(**bsp_conf),
+    layout.Zoomy(**zoomy_conf),
     # layout.TreeTab(),
     # layout.MonadTall(**layout_conf),
     # layout.MonadWide(**layout_conf),
@@ -36,5 +45,5 @@ floating_layout = layout.Floating(
         Match(title='branchdialog'),
         Match(title='pinentry'),
     ],
-    border_focus=colors["color4"][0]
+    border_focus=colors["focus"][0]
 )
