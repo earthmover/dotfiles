@@ -1,9 +1,3 @@
-# Antonio Sarosi
-# https://youtube.com/c/antoniosarosi
-# https://github.com/antoniosarosi/dotfiles
-
-# Qtile keybindings
-
 from libqtile.config import Key
 from libqtile.command import lazy
 
@@ -64,13 +58,10 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod], "space", lazy.spawn("rofi -show run")),
 
     # Window Nav
-    ([mod, "shift"], "m", lazy.spawn("rofi -show")),
+    #([mod], "Tab", lazy.spawn("rofi -show")),
 
     # Browser
     ([mod], "b", lazy.spawn("brave")),
-
-    # File Explorer
-    ([mod], "e", lazy.spawn("pcmanfm")),
 
     # Terminal
     ([mod], "Return", lazy.spawn("alacritty")),

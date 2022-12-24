@@ -3,6 +3,7 @@ from .theme import colors
 
 # Get the icons at https://www.nerdfonts.com/cheat-sheet (you need a Nerd Font)
 
+
 def base(fg='text', bg='dark'): 
     return {
         'foreground': colors[fg],
@@ -35,7 +36,7 @@ def workspaces():
             padding_y=8,
             padding_x=2,
             borderwidth=1,
-            active=colors['color4'],
+            active=colors['color1'],
             inactive=colors['text'],
             rounded=True,
             highlight_method='block',
@@ -48,6 +49,7 @@ def workspaces():
             disable_drag=True
         ),
         separator(),
+        widget.WindowCount(**base(fg='color1'), fmt="[{}] "),
         widget.WindowName(**base(fg='text'), fontsize=14, padding=2),
         separator(),
     ]
@@ -71,15 +73,11 @@ primary_widgets = [
 
     # CPU usage
     icon(bg="grey", fg="color3", text=' 龍 '),
-    widget.CPU(**base(bg='grey')),
-
-    # Load
-    icon(bg="grey", fg="color1", text=' 勒 '),
-    widget.Load(**base(bg='grey')),
+    widget.CPU(**base(bg='grey'), format="{freq_current}GHz {load_percent}%"),
 
     # Memory
     icon(bg="grey", fg="color2", text='  '),
-    widget.Memory(**base(bg='grey'), measure_mem="M"),
+    widget.Memory(**base(bg='grey'), measure_mem="M", format="{MemUsed:.0f}M"),
 
     # Battery
     # icon(bg="grey", fg="color4", text='  '),
@@ -93,18 +91,14 @@ primary_widgets = [
     widget.Systray(background=colors['dark'], padding=5),
 
     # Shutdown button
-    widget.QuickExit(**base(bg='grey', fg="urgent"), countdown_start=9, default_text=" ⏻ Elo "),
+    widget.QuickExit(**base(bg='grey', fg="urgent"), countdown_start=9, default_text=" ⏻ PWR "),
 ]
 
 secondary_widgets = [
     *workspaces(),
-
     separator(),
-
     widget.CurrentLayoutIcon(**base(bg='grey'), scale=0.65),
-
     widget.CurrentLayout(**base(bg='grey'), padding=5),
-
     widget.Clock(**base(bg='grey'), format='%d/%m/%Y - %H:%M '),
 ]
 

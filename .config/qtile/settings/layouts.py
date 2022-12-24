@@ -25,6 +25,7 @@ zoomy_conf = {
 layouts = [
     layout.Bsp(**bsp_conf),
     layout.Zoomy(**zoomy_conf),
+    layout.Max(),
     # layout.TreeTab(),
     # layout.MonadTall(**layout_conf),
     # layout.MonadWide(**layout_conf),
