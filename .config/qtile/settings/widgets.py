@@ -1,10 +1,11 @@
 from libqtile import widget
 from .theme import colors
 
+
 # Get the icons at https://www.nerdfonts.com/cheat-sheet (you need a Nerd Font)
 
 
-def base(fg='text', bg='dark'): 
+def base(fg='text', bg='dark'):
     return {
         'foreground': colors[fg],
         'background': colors[bg]
@@ -24,7 +25,7 @@ def icon(fg='text', bg='dark', fontsize=16, text="?"):
     )
 
 
-def workspaces(): 
+def workspaces():
     return [
         separator(),
         widget.GroupBox(
@@ -87,11 +88,16 @@ primary_widgets = [
     icon(bg="grey", fg="color3", fontsize=17, text='  '),
     widget.Clock(**base(bg='grey'), format='%H:%M '),
 
-    # Tray
-    widget.Systray(background=colors['dark'], padding=5),
+    # Hideable widget box
+    widget.WidgetBox(**base(bg="grey", fg="text"), text_closed=" ", text_open=" ", fontsize=20,
+                     widgets=[
+                         # Tray
+                         widget.Systray(background=colors['dark'], padding=5),
+                         # Shutdown button
+                         widget.QuickExit(**base(bg='grey', fg="urgent"), countdown_start=9, default_text=" ⏻ PWR "),
+                     ]
+                     ),
 
-    # Shutdown button
-    widget.QuickExit(**base(bg='grey', fg="urgent"), countdown_start=9, default_text=" ⏻ PWR "),
 ]
 
 secondary_widgets = [
