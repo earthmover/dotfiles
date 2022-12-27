@@ -13,6 +13,7 @@ bsp_conf = {
     'margin': 10,
     'grow_amount': 5,
     'lower_right': True,
+    'fair': False,
     'ratio': 1.6,
 
 }
