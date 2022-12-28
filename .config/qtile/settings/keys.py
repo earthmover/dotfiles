@@ -18,8 +18,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod, "shift"], "h", lazy.layout.shrink()),
 
     # Toggle floating & fullscreen
-    ([mod], "t", lazy.window.toggle_floating()),
-    ([mod], "m", lazy.layout.maximize()),
+    ([mod], "m", lazy.window.toggle_floating()),
     ([mod], "n", lazy.layout.normalize()),
     ([mod], "f", lazy.window.toggle_fullscreen()),
 
