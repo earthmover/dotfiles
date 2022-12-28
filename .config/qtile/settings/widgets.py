@@ -105,7 +105,6 @@ secondary_widgets = [
     separator(),
     widget.CurrentLayoutIcon(**base(bg='grey'), scale=0.65),
     widget.CurrentLayout(**base(bg='grey'), padding=5),
-    widget.Clock(**base(bg='grey'), format='%d/%m/%Y - %H:%M '),
 ]
 
 widget_defaults = {
