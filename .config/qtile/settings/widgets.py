@@ -16,7 +16,7 @@ def separator():
     return widget.Sep(**base(), linewidth=0, padding=5)
 
 
-def icon(fg='text', bg='dark', fontsize=16, text="?"):
+def icon(fg='text', bg='dark', fontsize=18, text="?"):
     return widget.TextBox(
         **base(fg, bg),
         fontsize=fontsize,
@@ -31,7 +31,7 @@ def workspaces():
         widget.GroupBox(
             **base(fg='light'),
             font='MesloLGS NF',
-            fontsize=20,
+            fontsize=18,
             margin_y=2,
             margin_x=0,
             padding_y=8,
@@ -51,7 +51,7 @@ def workspaces():
         ),
         separator(),
         widget.WindowCount(**base(fg='color1'), fmt="[{}] "),
-        widget.WindowName(**base(fg='text'), fontsize=14, padding=2),
+        widget.WindowName(**base(fg='text'), fontsize=20, padding=2),
         separator(),
     ]
 
@@ -85,11 +85,11 @@ primary_widgets = [
     # widget.Battery(**base(bg='grey')),
 
     # Clock/calendar
-    icon(bg="grey", fg="color3", fontsize=17, text='  '),
+    icon(bg="grey", fg="color3", text='  '),
     widget.Clock(**base(bg='grey'), format='%H:%M '),
 
     # Hideable widget box
-    widget.WidgetBox(**base(bg="grey", fg="text"), text_closed=" ", text_open=" ", fontsize=20,
+    widget.WidgetBox(**base(bg="grey", fg="text"), text_closed=" ", text_open="",
                      widgets=[
                          # Tray
                          widget.Systray(background=colors['dark'], padding=5),
@@ -109,7 +109,7 @@ secondary_widgets = [
 
 widget_defaults = {
     'font': 'MesloLGS NF Bold',
-    'fontsize': 14,
+    'fontsize': 18,
     'padding': 1,
 }
 extension_defaults = widget_defaults.copy()
