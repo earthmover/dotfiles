@@ -1,7 +1,9 @@
 #!/bin/sh
 
 # set resolution
-xrandr -s 1920x1200 &
+xrandr -s 3840x2160 &
+# load xresources
+xrdb -merge ~/Xresources &
 # set wallpaper
 ./.fehbg &
 # picom compositor

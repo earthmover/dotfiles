@@ -94,7 +94,7 @@ primary_widgets = [
                          # Tray
                          widget.Systray(background=colors['dark'], padding=5),
                          # Shutdown button
-                         widget.QuickExit(**base(bg='grey', fg="urgent"), countdown_start=9, default_text=" ⏻ PWR "),
+                         widget.QuickExit(**base(bg='grey', fg="urgent"), countdown_start=9, default_text=" ⏻ Shutdown "),
                      ]
                      ),
 
