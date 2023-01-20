@@ -6,12 +6,12 @@ from .theme import colors
 
 
 bsp_conf = {
-    'border_focus': colors['focus'][0],
-    'border_normal': colors['grey'][0],
-    'border_width': 3,
+    'border_focus': colors['color1'][0],
+    'border_normal': colors['focus'][0],
+    'border_width': 4,
     'border_on_single': True,
-    'margin': 6,
-    'grow_amount': 3,
+    'margin': 8,
+    'grow_amount': 1,
     'lower_right': True,
     'fair': False,
     'ratio': 1.6,
