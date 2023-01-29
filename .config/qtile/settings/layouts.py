@@ -8,9 +8,9 @@ from .theme import colors
 bsp_conf = {
     'border_focus': colors['color1'][0],
     'border_normal': colors['focus'][0],
-    'border_width': 4,
+    'border_width': 6,
     'border_on_single': True,
-    'margin': 8,
+    'margin': 12,
     'grow_amount': 1,
     'lower_right': True,
     'fair': False,
