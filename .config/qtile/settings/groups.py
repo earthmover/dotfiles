@@ -5,7 +5,7 @@ from libqtile.command import lazy
 from .keys import mod, keys
 
 groups = [Group(i) for i in [
-    " 爵  ", "   ", "   ", "  ", "  ",
+    "1", "2",
 ]]
 
 for i, group in enumerate(groups):

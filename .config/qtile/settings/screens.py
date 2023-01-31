@@ -1,13 +1,6 @@
-# Antonio Sarosi
-# https://youtube.com/c/antoniosarosi
-# https://github.com/antoniosarosi/dotfiles
-
-# Multimonitor support
-
 from libqtile.config import Screen
 from libqtile import bar
 from libqtile.log_utils import logger
-from .widgets import primary_widgets, secondary_widgets
 import subprocess
 
 
@@ -15,7 +8,7 @@ def status_bar(widgets):
     return bar.Bar(widgets, 26, opacity=0.5)
 
 
-screens = [Screen(top=status_bar(primary_widgets))]
+screens = [Screen()]
 
 xrandr = "xrandr | grep -w 'connected' | cut -d ' ' -f 2 | wc -l"
 
@@ -35,4 +28,4 @@ else:
 
 if connected_monitors > 1:
     for _ in range(1, connected_monitors):
-        screens.append(Screen(top=status_bar(secondary_widgets)))
+        screens.append(Screen())

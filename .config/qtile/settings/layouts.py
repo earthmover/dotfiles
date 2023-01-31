@@ -1,13 +1,14 @@
 from libqtile import layout
 from libqtile.config import Match
 from .theme import colors
+from colors import catppuccin
 
 # Layouts and layout rules
 
 
 bsp_conf = {
-    'border_focus': colors['color1'][0],
-    'border_normal': colors['focus'][0],
+    'border_focus': catppuccin["Lavender"],
+    'border_normal': catppuccin["Crust"],
     'border_width': 6,
     'border_on_single': True,
     'margin': 12,
