@@ -1,11 +1,11 @@
 from libqtile import hook
 
-from settings.keys import mod, keys
-from settings.groups import groups
-from settings.layouts import layouts, floating_layout
-from settings.screens import screens
-from settings.mouse import mouse
-from settings.path import qtile_path
+from src.keys import mod, keys
+from src.groups import groups
+from src.layouts import layouts, floating_layout
+from src.screens import screens
+from src.mouse import mouse
+from src.path import qtile_path
 
 from os import path
 import subprocess

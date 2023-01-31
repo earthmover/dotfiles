@@ -1,11 +1,6 @@
 from libqtile.config import Screen
-from libqtile import bar
 from libqtile.log_utils import logger
 import subprocess
-
-
-def status_bar(widgets):
-    return bar.Bar(widgets, 26, opacity=0.5)
 
 
 screens = [Screen()]
